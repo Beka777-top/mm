@@ -1,0 +1,58 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.container3{
+    position: relative;
+    color: white;
+    margin: 10px;
+}
+.playback{
+    width: 200px;
+    border-radius: 15px;
+}
+nav a{
+    display: block;
+    color: white;
+}
+.container3{
+    background: wheat;
+}
+aside{
+    background: #000;
+    border-radius: 15px;
+    padding: 10px;
+}
+.video-container {
+    position: relative;
+}
+
+.video-container h1{
+    position: absolute;
+    color: aliceblue;
+    font-size: 15px;
+    left: 15px;
+    top: 30%;
+    background: -webkit-linear-gradient(147deg, #FFE53B 0%, #FF2525 74%); 
+ -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+}
+.container2{
+    background: gray;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+    font-size: 15px;
+}
+.table{
+    border-spacing: 0px;
+}
+.table th, td{
+    border: solid 1px black;
+    
+}
+.table th{
+    background: #000;
+    color: white;
+}

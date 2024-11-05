@@ -1,0 +1,74 @@
+.color {
+    background: blue;
+    color: white;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}
+.colo{
+    background: rgb(104, 104, 104);
+    color: white;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+.bac{
+    background: gray;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.dac{
+background:gray;
+display: inline-block;
+width: 200px;
+height: 200px;
+position: absolute;
+top: 10px;
+left: 220px;
+}
+.cent{
+    background: blue;
+    color: white;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    top: 50px;
+    left: 30px;
+    position: absolute;
+}
+.centr{
+    background: red;
+    color: white;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    top: 50px;
+    left: 30px;
+    position: absolute;
+}
+.small{
+    background: gray;
+    color: white;
+    display: inline-block;
+    position: absolute;
+    width: 20%;
+    height: 100%;
+}
+.big{
+    background: white;
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    display: inline-block;
+    left: 20%;
+}

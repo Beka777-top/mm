@@ -1,0 +1,28 @@
+.keste{
+    border-spacing: 0px;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    border-radius: 9px;
+}
+
+.keste th,td{
+    border: 1px solid black;
+}
+.keste td{
+    font-size: 20px;
+    font-weight: 900;
+}
+.keste tr{
+    background: rgb(120, 120, 194);
+}
+.keste{
+    color: white;
+}
+.content{
+    width: fit-content;
+    background: rgb(133, 133, 255);
+    border: 10px black;
+    border: solid 3px;
+}

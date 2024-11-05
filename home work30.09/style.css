@@ -1,0 +1,32 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "first first first"
+    "second thirds fourth" 
+    "five five five";
+    gap: 5px;
+    padding: 10px;
+}
+.first{
+    padding-left: 300px;
+    grid-area: first;
+    background: rgb(86, 86, 255);
+}
+.second{
+    grid-area: second;
+    background: rgb(248, 76, 76);
+}
+.thirds{
+    grid-area: thirds;
+    background: rgb(56, 253, 56);
+}
+.fourth{
+    grid-area: fourth;
+    background: rgb(255, 214, 138);
+}
+.five{
+    padding-left: 300px;
+    grid-area: five;
+    background: rgb(194, 177, 177);
+}
