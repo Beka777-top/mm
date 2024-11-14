@@ -13,32 +13,32 @@
 
 
 
-//  var number = Number(prompt("0 жоғары санды енгізіңіз: "));
-//  var i = 1;
-//  if ( 0 <= number) {
-//      console.log (number *= i);
-//      console.log("Санның факториалы: " + number);
-//  }
-//  else if (number < 0) {
-//      console.log("Факториалға 0 жоғары санды енгізіңіз: ");
-//  }
+  var number = Number(prompt("0 жоғары санды енгізіңіз: "));
+  var i = 1;
+  if ( 0 <= number) {
+      console.log (number *= i);
+      console.log("Санның факториалы: " + number);
+  }
+  else if (number < 0) {
+      console.log("Факториалға 0 жоғары санды енгізіңіз: ");
+  }
 
 
 
-let grade = prompt("0-ден 100-ге дейін ұпай енгізіңіз:");
+// let grade = prompt("0-ден 100-ге дейін ұпай енгізіңіз:");
 
-if (grade >= 0 && grade <= 59) {
-  alert("Баға: F");
-}
-if (grade >= 60 && grade <= 69) {
-  alert("Баға: D");
-}
-if (grade >= 70 && grade <= 79) {
-  alert("Баға: C");
-}
-if (grade >= 80 && grade <= 89) {
-  alert("Баға: B");
-}
-if (grade >= 90 && grade <= 100) {
-  alert("Баға: A");
-}
+// if (grade >= 0 && grade <= 59) {
+//   alert("Баға: F");
+// }
+// if (grade >= 60 && grade <= 69) {
+//   alert("Баға: D");
+// }
+// if (grade >= 70 && grade <= 79) {
+//   alert("Баға: C");
+// }
+// if (grade >= 80 && grade <= 89) {
+//   alert("Баға: B");
+// }
+// if (grade >= 90 && grade <= 100) {
+//   alert("Баға: A");
+// }
