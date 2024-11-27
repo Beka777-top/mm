@@ -7,12 +7,16 @@
 </head>
 <body>
     <script>
-    let arr = []; 
-    for (let i = 0; i <= 100; i++) { 
-        if (i % 2 === 0) { 
-            console.log(i + " жуп"); 
-        } 
+let arr = [];
+
+while(true){
+    let number = +prompt("San engiz");
+    if (number % 2 !== 0) {
+        break;
     }
+    arr.push(number);
+}
+console.log(arr);
 
     </script>    
 </body>
