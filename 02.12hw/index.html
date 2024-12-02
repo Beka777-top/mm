@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const readBook = {
+    title: "Harry Potter",
+    author: "Joanne Kathleen Rowling",
+    pages: 3636,
+    isRead: false,
+};
+
+console.log(`Сіз ${readBook.title} кітабын ${readBook.author} жазған оқып жатырсыз.`);
+
+function toggleReadStatus(book) {
+    book.isRead == !book.isRead;
+    return book.isRead;
+}
+
+console.log(toggleReadStatus(readBook));
+
+    </script>
+</body>
+</html>
