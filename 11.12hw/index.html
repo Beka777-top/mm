@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="body">
+    <h1>JavaScript оқиғалары</h1>
+    <p id="newText">Бұл мәнтін өзгереді</p>
+    <button id="clickerNewText">Мәнтінді өзгерту</button>
+    <button id="Fon">Фон түсін өзгерту</button>
+    <div id="colo">Тінуірді кіргізіңіз</div>
+    <button id="data">Бүгінгі уақыты көрсеті</button>
+    <p id="time"></p>
+    <button id="clean">Тазалау</button>
+    <script>
+        const newText = document.getElementById('newText');
+        const clickerNewText = document.getElementById('clickerNewText');
+        const fon = document.getElementById('Fon');
+        const colo = document.getElementById('colo');
+        const data = document.getElementById('data');
+        const clean = document.getElementById('clean');
+        const time = document.getElementById('time');
+
+        clickerNewText.addEventListener('click', () => {
+            newText.textContent = 'Бұл жаңа текст!';
+        });
+        Fon.addEventListener('click', () => {
+            document.querySelector(".body").style.backgroundColor ="blue";
+            display.style.borderColor = "blue";
+            display.style.color = "white";
+        });
+        colo.addEventListener('mouseenter', () => {
+            colo.style.color = "red";
+        });
+        colo.addEventListener('mouseleave', () => {
+            colo.style.color = "black";
+        });
+        data.addEventListener("click", () => {
+
+        })
+        clean.addEventListener('click', () => {
+            time.textContent = "";
+        });
+    </script>
+</body>
+</html>
