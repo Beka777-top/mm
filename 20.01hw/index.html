@@ -15,11 +15,74 @@
         <div class="image-skip-container">
             <div class="timer">
                 <div class="timer-text"></div>
-            </div>
+            </div> 
+
+    <div>
+        <div id="timer">00:00</div>
+        <div class="button-container">
+            <button id="startButton">Начать</button>
+            <button id="resetButton">Сбросить</button>
+        </div>
+    </div>
+    
             <img src="https://ortalyq.kz/wp-content/uploads/2024/02/9AC28D1A-DCBD-4BD6-94B2-C8958876ADD4-1024x683.jpeg" alt="Scenic image">
             <button class="skip">Skip</button>
         </div>
+
+
+
+    <script>
+        let num = 0;
+        let isRunning = false;
+        let timer;
         
+        const startButton = document.getElementById('startButton');
+        const resetButton = document.getElementById('resetButton');
+        const timerDiv = document.getElementById('timer');
+        
+        startButton.addEventListener('click', () => {
+            if (!isRunning) {
+                startTimer();
+                startButton.textContent = 'Пауза';
+            } else {
+                stopTimer();
+                startButton.textContent = 'Продолжить';
+            }
+        });
+
+        resetButton.addEventListener('click', () => {
+            clearInterval(timer);
+            num = 0;
+            timerDiv.innerText = '00:00';
+            isRunning = false;
+            startButton.textContent = 'Начать';
+        });
+        
+        function updateTimer() {
+            num++;
+            displayTime();
+        }
+
+        function displayTime() {
+            const minutes = Math.floor(num / 60);
+            const seconds = num % 60;
+            timerDiv.textContent = `${padZero(minutes)}:${padZero(seconds)}`;
+        }
+
+        function padZero(number) {
+            return number < 10 ? `0${number}` : number;
+        }
+
+        function startTimer() {
+            isRunning = true;
+            timer = setInterval(updateTimer, 1000);
+        }
+        
+        function stopTimer() {
+            clearInterval(timer);
+            isRunning = false;
+        }
+    </script>
 
         <div class="button-container">
             <button class="btn">20 сагат</button>
