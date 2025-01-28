@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="name" placeholder="Текст жазыңыз">
+        <button class="save" onclick="saveData()">Save</button>
+    </div>
+    <div id="display-name"></div>
+    <script>
+        const nameInput = document.getElementById('name');
+        const saveButton = document.querySelector('.save');
+        const displayNameDiv = document.getElementById('display-name');
+
+        saveButton.addEventListener('click', saveData);
+
+        function saveData() {
+            localStorage.setItem('name', nameInput.value);
+            displaySavedName();
+        }
+
+        function displaySavedName() {
+            const name = localStorage.getItem('name');
+            if (name) {
+                displayNameDiv.textContent = `Saved text : ${name}`;
+            } else {
+                displayNameDiv.textContent = 'No data found';
+            }
+        }
+        window.onload = displaySavedName;
+    </script>
+</body>
+</html>

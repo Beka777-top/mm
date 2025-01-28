@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="name" placeholder="Hello, everyone">
+        <button class="save" onclick="saveData()">Save</button>
+        <div class="result">
+            <h2 id="sicret"></h2>
+            <button class="clear" onclick="clearData()">Clear</button>
+        </div>
+    </div>
+
+    <script>
+        const nameInput = document.getElementById('name');
+        const sicret = document.getElementById('sicret');
+        
+        function saveData() {
+            localStorage.setItem('name', nameInput.value);
+            const name = localStorage.getItem('name');
+            if (!name) {
+                alert("No data found");
+            } else {
+                sicret.textContent = name;
+            }
+        }
+
+        function clearData() {
+            localStorage.removeItem('name');
+            sicret.textContent = '';
+        }
+
+        function displaySavedName() {
+            const name = localStorage.getItem('name');
+            if (name) {
+                sicret.textContent = `${name}`;
+            } else {
+                sicret.textContent = 'No data found';
+            }
+        }
+        window.onload = displaySavedName;
+        
+    </script>
+</body>
+</html>
