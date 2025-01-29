@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Түс таңдаңыз</h1>
+        <p>Таңдалған түс:</p>
+        <input type="color" id="color">
+        <button id="save">Түсті сақтау</button>
+        <button id="clean">Тазалау</button>
+    </div>
+
+    <script>
+    window.addEventListener("load", () => {
+        const colorInput = document.getElementById('color');
+        const saveButton = document.getElementById('save');
+        const cleanButton = document.getElementById('clean');
+        let savedColor = sessionStorage.getItem('savedColor');
+
+        if(savedColor){
+            document.body.style.backgroundColor = savedColor;
+            colorInput.value = savedColor;
+        }
+        colorInput.addEventListener("input", changeColor);
+        saveButton.addEventListener("click", () => {
+            sessionStorage.setItem('savedColor', colorInput.value);
+        });
+        cleanButton.addEventListener("click", () => {
+            sessionStorage.removeItem("savedColor");
+            document.body.style.backgroundColor = "white";
+            colorInput.value = "";
+        });
+    });
+
+    function changeColor() {
+        const colorInput = document.getElementById('color');
+        document.body.style.backgroundColor = colorInput.value;
+    }
+    </script>
+</body>
+</html>
