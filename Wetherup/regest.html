@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация және Кіру</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #0000ad;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px ;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .toggle-link {
+            margin-top: 10px;
+            display: block;
+            color: #007BFF;
+            cursor: pointer;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="registrationForm">
+        <h2>Регистрация</h2>
+        <input type="text" id="regUsername" placeholder="Пайдаланушы аты">
+        <input type="password" id="regPassword" placeholder="Құпия сөз">
+        <a href="index2.html"><button onclick="register()">Тіркелу</button></a>
+        <span class="toggle-link" onclick="toggleForms()">Кіру</span>
+        <p class="error-message" id="regErrorMessage"></p>
+    </div>
+    <div class="container" id="loginForm" style="display: none;">
+        <h2>Кіру</h2>
+        <input type="text" id="loginUsername" placeholder="Пайдаланушы аты">
+        <input type="password" id="loginPassword" placeholder="Құпия сөз">
+        <a href="index2.html"><button onclick="login()">Кіру</button></a>
+        <span class="toggle-link" onclick="toggleForms()">Тіркелу</span>
+        <p class="error-message" id="loginErrorMessage"></p>
+    </div>
+    <script>
+        function toggleForms() {
+            const regForm = document.getElementById('registrationForm');
+            const loginForm = document.getElementById('loginForm');
+            if (regForm.style.display === 'none') {
+                regForm.style.display = 'block';
+                loginForm.style.display = 'none';
+            } else {
+                regForm.style.display = 'none';
+                loginForm.style.display = 'block';
+            }
+        }
+
+        function register() {
+            const username = document.getElementById('regUsername').value.trim();
+            const password = document.getElementById('regPassword').value.trim();
+            const regErrorMessage = document.getElementById('regErrorMessage');
+
+            if (username && password) {
+                localStorage.setItem('username', username);
+                localStorage.setItem('password', password);
+                alert('Тіркелу сәтті өтті!');
+                toggleForms();
+            } else {
+                regErrorMessage.textContent = 'Барлық өрістерді толтырыңыз!';
+            }
+        }
+
+        function login() {
+            const username = document.getElementById('loginUsername').value.trim();
+            const password = document.getElementById('loginPassword').value.trim();
+            const loginErrorMessage = document.getElementById('loginErrorMessage');
+            const storedUsername = localStorage.getItem('username');
+            const storedPassword = localStorage.getItem('password');
+
+            if (username === storedUsername && password === storedPassword) {
+                alert('Кіру сәтті өтті!');
+            } else {
+                loginErrorMessage.textContent = 'Қате пайдаланушы аты немесе құпия сөз!';
+            }
+        }
+    </script>
+</body>
+</html>
